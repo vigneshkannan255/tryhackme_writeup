@@ -1,5 +1,5 @@
 # tryhackme_writeup
 
-Learn Intreasting tools and explore with various box 
+Learn Interesting tools and explore with various box 
 
 https://tryhackme.com/
