@@ -1,0 +1,22 @@
+go to more the access machines and dowload your openvpn connection file 
+install openvpn using following command
+#sudo apt-get install openvpn
+run your vpn using following command
+#cd Downloads
+#sudo openvpn username.ovpn
+
+click my room in menu and open welcomebox
+click join room 
+click submit 
+click deploy to deploy the machine 
+copy ipaddress and paste it in your browser ,if you  get flag and connected successfully you will good to go
+copy the flag and paste it into the welcome box
+flag{connection_verified}
+click submit
+click next
+click submit
+
+
+now you completed welcome box 
+
+congratulations!!!
