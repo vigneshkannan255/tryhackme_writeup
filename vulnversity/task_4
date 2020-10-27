@@ -1,0 +1,18 @@
+#1 Try upload a few file types to the server, what common extension seems to be blocked?
+Ans: .php
+
+#2 To identify which extensions are not blocked, we're going to fuzz the upload form.
+Ans: No answer needed
+
+#3 We're going to use Intruder (used for automating customised attacks).
+Ans: .phtml
+
+#4 Now we know what extension we can use for our payload we can progress.
+Ans: No answer needed
+
+
+#5 What is the name of the user who manages the webserver?
+Ans: bill 
+
+#6 What is the user flag?
+Ans: 8bd7992fbe8a6ad22a63361004cfcedb

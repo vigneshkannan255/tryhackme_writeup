@@ -1,0 +1,11 @@
+#1 In Linux, SUID (set owner userId upon execution) is a special type of file permission given to a file. 
+SUID gives temporary permissions to a user to run the program/file with the permission of the file owner (rather than the user who runs it).
+Ans: /bin/systemctl
+
+
+#2 Its challenge time! We have guided you through this far, 
+are you able to exploit this system further to escalate your privileges and get the final answer?
+Become root and get the last flag (/root/root.txt)
+Ans: a58ff8579f0a9270368d33a9966c7fd5
+
+

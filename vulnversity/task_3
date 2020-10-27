@@ -1,0 +1,6 @@
+#1 Lets first start of by scanning the website to find any hidden directories. 
+To do this, we're going to use GoBuster.
+Ans: No answer needed
+
+#2 What is the directory that has an upload form page?
+Ans: /internal/
