@@ -1,0 +1,21 @@
+
+#1 What verb would be used for a login?
+Ans: POST
+
+
+#2 What verb would be used to see your bank balance once you're logged in?
+Ans: GET
+
+
+#3 Does the body of a GET request matter? Yea/Nay
+Ans: Nay
+
+
+#4 What's the status code for "I'm a teapot"?
+Ans: 418
+
+
+#5 What status code will you get if you need to authenticate to access some content, and you're unauthenticated?
+Ans: 401
+
+
