@@ -1,0 +1,60 @@
+
+#1 Woohoo! We've gained a foothold into our victim machine! What's the name of the shell we have now?
+Ans: meterpreter
+
+
+#2 What user was running that Icecast process? The commands used in this question and the next few are taken directly from the 'RP: Metasploit' room.
+Ans: Dark
+
+
+
+#3 What build of Windows is the system?
+Ans: 7601
+
+
+
+#4 Now that we know some of the finer details of the system we are working with, let's start escalating our privileges. First, what is the architecture of the process we're running?
+Ans: x64
+
+
+#5 Now that we know the architecture of the process, let's perform some further recon. While this doesn't work the best on x64 machines, let's now run the following command `run post/multi/recon/local_exploit_suggester`. *This can appear to hang as it tests exploits and might take several minutes to complete*
+Ans: No answer needed
+
+
+#6 Running the local exploit suggester will return quite a few results for potential escalation exploits. What is the full path (starting with exploit/) for the first returned exploit?
+Ans: exploit/windows/local/bypassuac_eventvwr
+
+
+
+#7 Now that we have an exploit in mind for elevating our privileges, let's background our current session using the command `background` or `CTRL + z`. Take note of what session number we have, this will likely be 1 in this case. We can list all of our active sessions using the command `sessions` when outside of the meterpreter shell.
+Ans: No answer needed
+
+
+
+#8 Go ahead and select our previously found local exploit for use using the command `use FULL_PATH_FOR_EXPLOIT`
+Ans: No answer needed
+
+#9 Local exploits require a session to be selected (something we can verify with the command `show options`), set this now using the command `set session SESSION_NUMBER`
+Ans: No answer needed
+
+
+
+#10 Now that we've set our session number, further options will be revealed in the options menu. We'll have to set one more as our listener IP isn't correct. What is the name of this option?
+Ans: lhost 
+
+
+
+#11 Set this option now. You might have to check your IP on the TryHackMe network using the command `ip addr`
+Ans: No answer needed
+
+
+#12 After we've set this last option, we can now run our privilege escalation exploit. Run this now using the command `run`. Note, this might take a few attempts and you may need to relaunch the box and exploit the service in the case that this fails. 
+Ans: No answer needed
+
+
+#13 Following completion of the privilege escalation a new session will be opened. Interact with it now using the command `sessions SESSION_NUMBER`
+Ans: No answer needed
+
+
+#14 We can now verify that we have expanded permissions using the command `getprivs`. What permission listed allows us to take ownership of files?
+Ans: SeTakeOwnershipPrivilege
