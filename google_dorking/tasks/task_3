@@ -1,0 +1,21 @@
+
+#1 Using the SEO Site Checkup tool on "tryhackme.com", does TryHackMe pass the “Meta Title Test”? (Yea / Nay)
+Ans: Yea
+
+#2 Does "tryhackme.com" pass the “Keywords Usage Test?” (Yea / Nay)
+Ans: Nay
+
+
+#3 Use https://neilpatel.com/seo-analyzer/ to analyse http://googledorking.cmnatic.co.uk:
+Ans: No answer needed
+
+#4 With the same tool and domain in Question #3 (previous):
+How many pages use “flash”
+Ans: 0
+
+#5 From a "rating score" perspective alone, what website would list first?
+tryhackme.com or googledorking.cmnatic.co.uk
+Use tryhackme.com's score of 62/100 as of 31/03/2020 for this question.
+Ans: googledorking.cmnatic.co.uk
+
+

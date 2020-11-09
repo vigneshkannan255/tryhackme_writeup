@@ -1,0 +1,20 @@
+
+#1 Where would "robots.txt" be located on the domain "ablog.com"
+Ans: ablog.com/robots.txt
+
+
+#2 If a website was to have a sitemap, where would that be located?
+Ans: /sitemap.xml
+
+
+#3 How would we only allow "Bingbot" to index the website?
+Ans: User-agent: Bingbo
+
+#4 How would we prevent a "Crawler" from indexing the directory "/dont-index-me/"?
+Ans: Disallow: /dont-index-me/
+
+
+#5 What is the extension of a Unix/Linux system configuration file that we might want to hide from "Crawlers"?
+Ans: .conf
+
+
