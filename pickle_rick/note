@@ -1,0 +1,35 @@
+#deploy the machine
+
+http://ip
+
+#view page source
+#got username
+
+#look for password in the robots.txt file
+
+http://ip/robots.txt 
+ 
+
+#found login page 
+
+http://ip/login.php
+#put those  credentials to login
+#there we can execute the some commands not all
+#i tried for bash reverse shell it didn't work 
+#so i tried with perl reverse shell
+#got the shell
+
+cat the first ingredient
+
+#second ingredient is under the /home/someuser
+
+cat the second ingredient
+
+#for privilege escalation 
+#check for sudo -l
+#sudo command work without password 
+
+#third ingredient /root/3rdingredient
+
+sudo ls /root/
+sudo cat /root/3rdingredient
