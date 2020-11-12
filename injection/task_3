@@ -1,0 +1,27 @@
+Ping the box with 10 packets.  What is this command (without IP address)?
+Ans: & ping -c 10
+
+
+
+
+Redirect the box's Linux Kernel Version to a file on the web server.  What is the Linux Kernel Version?
+Ans: 4.15.0-101
+
+
+
+
+Enter "root" into the input and review the alert.  What type of alert do you get?
+Ans: success
+
+
+
+
+
+Enter "www-data" into the input and review the alert.  What type of alert do you get?
+Ans: success
+
+
+
+
+Enter your name into the input and review the alert.  What type of alert do you get?
+Ans: error
