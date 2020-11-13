@@ -1,0 +1,51 @@
+
+
+How many services are running under port 1000?
+Ans: 2
+
+
+
+What is running on the higher port?
+Ans: ssh
+
+
+
+
+What's the CVE you're using against the application? 
+Ans: CVE-2019-9053
+
+
+
+To what kind of vulnerability is the application vulnerable?
+Ans: sqli
+
+
+
+What's the password?
+Ans: secret
+
+
+
+Where can you login with the details obtained?
+Ans: ssh
+
+
+
+What's the user flag?
+Ans: G00d j0b, keep up!
+
+
+
+
+Is there any other user in the home directory? What's its name?
+Ans: sunbath
+
+
+
+What can you leverage to spawn a privileged shell?
+Ans: vim
+
+
+
+What's the root flag?
+Ans: W3ll d0n3. You made it!

