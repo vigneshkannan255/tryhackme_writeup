@@ -1,8 +1,7 @@
 ## nmap
 
-<code> sudo nmap -A ip </code> 
-
-## three open ports
+ <code> sudo nmap -A ip </code> 
+ 3 open ports
 
 http://ip:3000
 
